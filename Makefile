@@ -3,7 +3,7 @@ all: main
 CFLAGS = -pthread -O3
 LDFLAGS = -lz
 
-main: webserv.c main.c sock.c hashmap.c misc.c
-	$(CC) $(CFLAGS) -o bin/main $^ $(LDFLAGS) 
+main: src/webserv.c src/main.c src/sock.c src/hashmap.c src/misc.c
+	$(CC) $(LDFLAGS) $(CFLAGS) -o bin/main $^ 
 clean:
 	rm -f bin/main
